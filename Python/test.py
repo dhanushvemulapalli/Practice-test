@@ -1,13 +1,17 @@
+from colorama import Fore, Back, Style, init
 
-def arrange(arr):
-    odd = []
-    for i in range(1, len(arr), 2):
-        odd.append(arr[i])
-    even = []
-    for i in range(0, len(arr), 2):
-        even.append(arr[i])
-    return odd + even
+# Initialize (required on Windows, harmless on other OS)
+init()
 
-print(arrange([1,5,1,25,1,30,1,2,1,4]))
+# Foreground colors
+print(Fore.RED + "This is red text")
+print(Fore.GREEN + "This is green text")
+print(Fore.BLUE + "This is blue text")
+print(Fore.YELLOW + "This is yellow text")
+print(Fore.CYAN + "This is cyan text")
+print(Fore.MAGENTA + "This is magenta text")
+print(Fore.WHITE + "This is white text")
+print(Back.BLACK + "This is text with black background")
 
-
+# Reset color after printing
+print(Fore.RED + "Red text" + Style.RESET_ALL + " Back to normal")
